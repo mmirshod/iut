@@ -4,7 +4,9 @@
 from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.orm import Session
 
-from . import utils, models, schemas
+import .utils
+import .models
+import .schemas
 
 
 models.Base.metadata.create_all(bind=models.engine)
