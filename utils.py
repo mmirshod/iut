@@ -3,7 +3,8 @@ import re
 
 from sqlalchemy.orm import Session
 
-from . import models, schemas
+import .models 
+import .schemas
 
 
 def validate_email(email: str) -> bool:
