@@ -25,7 +25,7 @@ def new_feedback(feedback: schemas.FeedbackCreate, db: Session = Depends(get_db)
     return utils.create_feedback(db, feedback)
 
 
-@app.get('/feedbacks', response_model=schemas.Feedback)
+@app.get('/feedbacks', response_model=list[schemas.Feedback])
 def get_feedbacks(db: Session = Depends(get_db)):
     return utils.get_feedbacks(db=db)
 
